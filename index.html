@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo</title>
+    <!-- daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- tailwind css -->
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <!-- font awesome -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+          <!-- font family -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+<!-- link of css -->
+ <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="bg-[#f4f5f7] h-[100vh] flex flex-col justify-center items-center outfit-uniquifier">
+<!-- login form -->
+ 
+ <div class="w-[250px] h-[110px] bg-[url(./assets/bg.png)] bg-cover flex justify-center items-center">
+<img class="" src="./assets/Group.png" alt="">
+ </div>
+
+<form class=" bg-white w-[300px] h-[220px] content-center rounded-xl p-4 ">
+
+    <div>
+    <label class="font-semibold" for="text">Mobile Number</label><br>
+    <input class="mt-1 border-none bg-[#f4f5f7] rounded-[15px] w-[270px] h-[30px] text-[14px] pl-3" type="text" name="" id="mobilenumber" placeholder="Enter Your Number"><br>
+    </div>
+
+    <div class="mt-3">
+    <label class="font-semibold" for="text">4 Digit Pin</label><br>
+    <input class="mt-1 border-none bg-[#f4f5f7] rounded-[15px] w-[270px] h-[30px] text-[14px] pl-3" type="password" name="" id="fourdigitpin" placeholder="Enter 4 Digit Pin">
+    </div>
+
+    <button class="btn bg-[#0874f2] text-white w-[270px] h-[30px] rounded-[15px] mt-3 ml- " id="btn">Log In</button>
+
+</form>
+
+ <script>
+    document.getElementById("btn").addEventListener("click", function(e){
+        e.preventDefault()
+        const mobileNum = 17546778890 ;
+        const pin = 1234 ;
+
+        const mobileNumber = parseInt(document.getElementById("mobilenumber").value)
+        const fourPin = parseInt(document.getElementById("fourdigitpin").value)
+
+        if(mobileNumber === mobileNum && fourPin === pin){
+            window.location.href="./mainpage.html"
+        }
+        else{
+            alert("Invalid Entry");
+        }
+    })
+ </script>
+</body>
+
+</html>
